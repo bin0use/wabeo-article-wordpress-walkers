@@ -28,6 +28,7 @@ class Walker_into_walker extends Walker_Category {
                 $current_menu = ( get_queried_object_id() == $item->ID ) ? ' class="current-menu-item"' : '' ; 
                 $link .= '<li' . $current_menu . '><a href="' . get_permalink( $item->ID ) . '">' . $loc->post_title . '</a></li></ul>'; 
             } 
+            $link .= '</ul>';
         } 
 
         if ( !empty($feed_image) || !empty($feed) ) {
