@@ -26,7 +26,7 @@ class Walker_into_walker extends Walker_Category {
             $items = get_posts( 'post_type=any&' . $category->taxonomy . '=' . $category->slug );
             foreach( $items as $item ) { 
                 $current_menu = ( get_queried_object_id() == $item->ID ) ? ' class="current-menu-item"' : '' ; 
-                $link .= '<li' . $current_menu . '><a href="' . get_permalink( $item->ID ) . '">' . $loc->post_title . '</a></li></ul>'; 
+                $link .= '<li' . $current_menu . '><a href="' . get_permalink( $item->ID ) . '">' . $loc->post_title . '</a></li>'; 
             } 
             $link .= '</ul>';
         } 
