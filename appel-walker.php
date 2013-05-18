@@ -12,7 +12,7 @@ wp_nav_menu(
     'after'           => '', // texte à mettre après le lien
     'link_before'     => '', // texte par lequel commence le lien
     'link_after'      => '', // texte par lequel termine le lien
-    'items_wrap'      => '<ul id="\&quot;%1$s\&quot;" class="\&quot;%2$s\&quot;">%3$s</ul>', //défini la forme du menu (ul, ol, rien...)
+    'items_wrap'      => '&lt;ul id="\&quot;%1$s\&quot;" class="\&quot;%2$s\&quot;"&gt;%3$s&lt;/ul&gt;', //défini la forme du menu (ul, ol, rien...)
     'depth'           => 0, // profondeur de menu admise (0 pour no-limit)
     'walker'          => new My_Walker() // C'EST CET ÉLÉMENT QUI NOUS INTÉRESSE !!
   )
