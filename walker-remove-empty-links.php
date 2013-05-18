@@ -15,8 +15,10 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $output .= $indent . '<li' . $id . $value . $class_names .'>';
 
     // MODIF 1
-    // remplacer SPAN par l'élément souhaité pour remplacer le  des liens vides
-    $balise = ( ! empty( $item->url ) && $item->url != '#') ? 'a' : 'span';
+    // si le lien est vide...
+    // ou s'il comment par '#' (ancre)...
+    // alors la balise sera un <span> ou lieu d'un <a>
+    $balise = ( ! empty( $item->url ) && subrstr( $item->url, 0, 1 ) != '#') ? 'a' : 'span';
 
     $atts = array();
     $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
