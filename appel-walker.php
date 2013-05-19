@@ -14,6 +14,6 @@ wp_nav_menu(
     'link_after'      => '', // texte par lequel termine le lien
     'items_wrap'      => '<ul id="\&quot;%1$s\&quot;" class="\&quot;%2$s\&quot;">%3$s</ul>', //défini la forme du menu (ul, ol, rien...)
     'depth'           => 0, // profondeur de menu admise (0 pour no-limit)
-    'walker'          => new My_Walker() // C'EST CET ÉLÉMENT QUI NOUS INTÉRESSE !!
+    'walker'          => new My_Walker() // C'EST CET ELEMENT QUI NOUS INTÉRESSE !!
   )
 );
