@@ -18,7 +18,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     // si le lien est vide...
     // ou s'il comment par '#' (ancre)...
     // alors la balise sera un 'span' ou lieu d'un 'a'
-    $balise = ( ! empty( $item->url ) && subrstr( $item->url, 0, 1 ) != '#') ? 'a' : 'span';
+    $balise = ( ! empty( $item->url ) && substr( $item->url, 0, 1 ) != '#') ? 'a' : 'span';
 
     $atts = array();
     $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
